@@ -1,0 +1,13 @@
+# secrets
+.env
+# data (released separately on Zenodo, see PROTOCOL.md section 7)
+data/
+reports/
+logs/
+# commercial work, not part of the research panel
+client_check/
+client-materials/
+# python / os
+__pycache__/
+*.pyc
+.DS_Store

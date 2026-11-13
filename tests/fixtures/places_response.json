@@ -1,0 +1,17 @@
+{
+  "places": [
+    {
+      "id": "ChIJmockplaceid000000001",
+      "displayName": {"text": "Summit Roofing", "languageCode": "en"},
+      "formattedAddress": "100 Mock Summit St, Houston, TX 77002, USA",
+      "nationalPhoneNumber": "(713) 555-1000",
+      "internationalPhoneNumber": "+1 713-555-1000",
+      "websiteUri": "https://www.summitroofing-mock.example.com",
+      "rating": 4.6,
+      "userRatingCount": 312,
+      "businessStatus": "OPERATIONAL",
+      "types": ["roofing_contractor", "point_of_interest", "establishment"],
+      "location": {"latitude": 29.7704, "longitude": -95.3798}
+    }
+  ]
+}

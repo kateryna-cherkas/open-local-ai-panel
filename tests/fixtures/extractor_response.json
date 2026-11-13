@@ -1,0 +1,9 @@
+{
+  "id": "msg_mockextract01",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-haiku-4-5",
+  "stop_reason": "end_turn",
+  "content": [{"type": "text", "text": "{\"businesses\": []}"}],
+  "usage": {"input_tokens": 900, "output_tokens": 150}
+}

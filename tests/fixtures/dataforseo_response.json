@@ -1,0 +1,36 @@
+{
+  "version": "0.1.20260101",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "2.1 sec.",
+  "cost": 0.004,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "mock-task-0001",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "2.0 sec.",
+      "cost": 0.004,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "organic", "live", "advanced"],
+      "data": {"api": "serp", "function": "live", "se": "google", "se_type": "organic", "language_code": "en", "device": "desktop", "depth": 10},
+      "result": [
+        {
+          "keyword": "PLACEHOLDER",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 1026201,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=mock",
+          "datetime": "2026-11-02 14:00:00 +00:00",
+          "item_types": ["ai_overview", "local_pack", "organic"],
+          "se_results_count": 1000000,
+          "items_count": 0,
+          "items": []
+        }
+      ]
+    }
+  ]
+}

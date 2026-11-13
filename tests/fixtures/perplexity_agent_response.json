@@ -1,0 +1,12 @@
+{
+  "id": "agent_mock0001",
+  "object": "agent.response",
+  "status": "completed",
+  "model": "perplexity/sonar",
+  "output_text": "PLACEHOLDER",
+  "output": [
+    {"type": "search_results", "queries": ["best roofing companies Houston TX"], "results": [{"id": 1, "url": "https://example.com", "title": "Example", "snippet": "", "date": null}]},
+    {"type": "message", "role": "assistant", "content": [{"type": "output_text", "text": "PLACEHOLDER"}]}
+  ],
+  "usage": {"input_tokens": 30, "output_tokens": 400}
+}

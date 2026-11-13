@@ -1,0 +1,17 @@
+{
+  "candidates": [
+    {
+      "content": {"parts": [{"text": "PLACEHOLDER"}], "role": "model"},
+      "finishReason": "STOP",
+      "groundingMetadata": {
+        "webSearchQueries": ["best roofing companies Houston TX"],
+        "searchEntryPoint": {"renderedContent": "<div>mock</div>"},
+        "groundingChunks": [{"web": {"uri": "https://example.com", "title": "Example"}}],
+        "groundingSupports": [{"segment": {"startIndex": 0, "endIndex": 10, "text": "mock"}, "groundingChunkIndices": [0]}]
+      }
+    }
+  ],
+  "usageMetadata": {"promptTokenCount": 30, "candidatesTokenCount": 400, "totalTokenCount": 430},
+  "modelVersion": "gemini-3.5-flash",
+  "responseId": "mock-response-id"
+}

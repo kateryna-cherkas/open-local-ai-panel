@@ -1,0 +1,12 @@
+{
+  "id": "mock-pplx-0001",
+  "model": "sonar",
+  "created": 1760000000,
+  "object": "chat.completion",
+  "choices": [
+    {"index": 0, "finish_reason": "stop", "message": {"role": "assistant", "content": "PLACEHOLDER"}}
+  ],
+  "citations": ["https://example.com"],
+  "search_results": [{"title": "Example", "url": "https://example.com", "date": "2026-01-01"}],
+  "usage": {"prompt_tokens": 30, "completion_tokens": 400, "total_tokens": 430, "search_context_size": "low"}
+}

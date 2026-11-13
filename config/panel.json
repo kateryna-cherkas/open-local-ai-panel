@@ -1,0 +1,146 @@
+{
+  "protocol_version": "0.2",
+  "k_repeats": 5,
+  "country": "US",
+  "language_code": "en",
+  "niches": [
+    "construction",
+    "appliance_repair",
+    "roofing",
+    "cleaning"
+  ],
+  "prompt_templates": {
+    "construction": {
+      "P1": "What are the best general contractors in {city}, {state}?",
+      "P2": "I want to remodel my kitchen in {city}, {state}. Which contractors should I call?",
+      "P3": "I need a contractor to repair water damage in my house in {city}, {state}. Who can start soon?"
+    },
+    "appliance_repair": {
+      "P1": "What are the best appliance repair companies in {city}, {state}?",
+      "P2": "My dishwasher is not draining in {city}, {state}. Which appliance repair companies should I call?",
+      "P3": "My refrigerator stopped cooling in {city}, {state}. Who can come out today?"
+    },
+    "roofing": {
+      "P1": "What are the best roofing companies in {city}, {state}?",
+      "P2": "I need a roof replacement in {city}, {state}. Which companies should I call?",
+      "P3": "My roof is leaking after a storm in {city}, {state}. Who can I call to fix it fast?"
+    },
+    "cleaning": {
+      "P1": "What are the best house cleaning services in {city}, {state}?",
+      "P2": "I need a deep cleaning for my house in {city}, {state}. Which companies should I call?",
+      "P3": "I'm moving out this week in {city}, {state}. Who can do a move-out cleaning on short notice?"
+    },
+    "hvac": {
+      "P1": "What are the best HVAC companies in {city}, {state}?",
+      "P2": "I want a new central AC system installed in {city}, {state}. Which companies should I call?",
+      "P3": "My AC stopped working in {city}, {state}. Who can come out today?"
+    },
+    "plumbing": {
+      "P1": "What are the best plumbers in {city}, {state}?",
+      "P2": "I need my water heater replaced in {city}, {state}. Which companies should I call?",
+      "P3": "I have a burst pipe in {city}, {state}. Which plumber can come right away?"
+    }
+  },
+  "engines": {
+    "openai": {
+      "enabled": true,
+      "model": "gpt-6.1-sol",
+      "endpoint": "https://api.openai.com/v1/responses",
+      "search_context_size": "medium",
+      "requests_per_minute": 30,
+      "price_per_call_usd": null
+    },
+    "gemini": {
+      "enabled": true,
+      "model": "gemini-3.5-flash",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+      "requests_per_minute": 30,
+      "price_per_call_usd": null
+    },
+    "perplexity": {
+      "enabled": true,
+      "mode": "agent",
+      "model": "sonar",
+      "endpoint": "https://api.perplexity.ai/chat/completions",
+      "agent_endpoint": "https://api.perplexity.ai/v1/agent",
+      "agent_preset": "medium",
+      "requests_per_minute": 30,
+      "price_per_call_usd": null
+    },
+    "claude": {
+      "enabled": true,
+      "model": "claude-sonnet-5-5",
+      "endpoint": "https://api.anthropic.com/v1/messages",
+      "anthropic_version": "2023-06-01",
+      "web_search_tool_type": "web_search_20260209",
+      "allowed_callers": [
+        "direct"
+      ],
+      "max_tokens": 4096,
+      "max_uses": 5,
+      "requests_per_minute": 30,
+      "price_per_call_usd": null
+    },
+    "google_aio": {
+      "enabled": true,
+      "model": "google-ai-overview",
+      "endpoint": "https://api.dataforseo.com/v3/serp/google/organic/live/advanced",
+      "device": "desktop",
+      "depth": 10,
+      "load_async_ai_overview": true,
+      "requests_per_minute": 60,
+      "price_per_call_usd": null
+    }
+  },
+  "local_pack": {
+    "endpoint": "https://api.dataforseo.com/v3/serp/google/organic/live/advanced",
+    "device": "desktop",
+    "depth": 10,
+    "requests_per_minute": 60,
+    "price_per_call_usd": null
+  },
+  "places": {
+    "endpoint": "https://places.googleapis.com/v1/places:searchText",
+    "field_mask": "places.id,places.displayName,places.formattedAddress,places.nationalPhoneNumber,places.internationalPhoneNumber,places.websiteUri,places.rating,places.userRatingCount,places.businessStatus,places.types,places.location",
+    "location_bias_radius_m": 50000,
+    "page_size": 5,
+    "requests_per_minute": 100,
+    "price_per_call_usd": null,
+    "include_pure_service_area_businesses": true
+  },
+  "extractor": {
+    "model": "claude-haiku-4-5",
+    "endpoint": "https://api.anthropic.com/v1/messages",
+    "anthropic_version": "2023-06-01",
+    "prompt_version": "v2",
+    "max_tokens": 2048,
+    "requests_per_minute": 50,
+    "price_per_call_usd": null
+  },
+  "resolution": {
+    "name_similarity_threshold": 0.85,
+    "metro_radius_km": 60,
+    "niche_keywords": {
+      "construction": "general contractor",
+      "appliance_repair": "appliance repair",
+      "roofing": "roofing",
+      "cleaning": "house cleaning",
+      "hvac": "HVAC",
+      "plumbing": "plumbing"
+    }
+  },
+  "validation": {
+    "sample_size": 100,
+    "min_recall": 0.9
+  },
+  "metrics": {
+    "persistence_rr_threshold": 0.4,
+    "bootstrap_iterations": 1000,
+    "bootstrap_seed": 20261006
+  },
+  "retry": {
+    "max_attempts": 5,
+    "base_delay_s": 2.0,
+    "max_delay_s": 60.0
+  }
+}

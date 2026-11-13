@@ -1,0 +1,31 @@
+{
+  "id": "resp_mock0001",
+  "object": "response",
+  "created_at": 1760000000,
+  "status": "completed",
+  "model": "gpt-6.1-sol",
+  "output": [
+    {
+      "id": "ws_mock0001",
+      "type": "web_search_call",
+      "status": "completed",
+      "action": {"type": "search", "query": "best roofing companies Houston TX"}
+    },
+    {
+      "id": "msg_mock0001",
+      "type": "message",
+      "status": "completed",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "PLACEHOLDER",
+          "annotations": [
+            {"type": "url_citation", "start_index": 0, "end_index": 1, "url": "https://example.com", "title": "Example"}
+          ]
+        }
+      ]
+    }
+  ],
+  "usage": {"input_tokens": 300, "output_tokens": 400, "total_tokens": 700}
+}

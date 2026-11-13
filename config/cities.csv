@@ -1,0 +1,27 @@
+city,state,state_name,tier,latitude,longitude,population,dataforseo_location_name,timezone
+Los Angeles,CA,California,large,34.0522,-118.2437,3869089,"Los Angeles,California,United States",America/Los_Angeles
+Chicago,IL,Illinois,large,41.8781,-87.6298,2731585,"Chicago,Illinois,United States",America/Chicago
+Houston,TX,Texas,large,29.7604,-95.3698,2397315,"Houston,Texas,United States",America/Chicago
+Phoenix,AZ,Arizona,large,33.4484,-112.0740,1665481,"Phoenix,Arizona,United States",America/Phoenix
+Philadelphia,PA,Pennsylvania,large,39.9526,-75.1652,1574281,"Philadelphia,Pennsylvania,United States",America/New_York
+Jacksonville,FL,Florida,large,30.3322,-81.6557,1017689,"Jacksonville,Florida,United States",America/New_York
+Seattle,WA,Washington,large,47.6062,-122.3321,784777,"Seattle,Washington,United States",America/Los_Angeles
+Denver,CO,Colorado,large,39.7392,-104.9903,740613,"Denver,Colorado,United States",America/Denver
+Boston,MA,Massachusetts,large,42.3601,-71.0589,672973,"Boston,Massachusetts,United States",America/New_York
+Atlanta,GA,Georgia,large,33.7490,-84.3880,529110,"Atlanta,Georgia,United States",America/New_York
+Bakersfield,CA,California,mid,35.3733,-119.0187,422165,"Bakersfield,California,United States",America/Los_Angeles
+Tampa,FL,Florida,mid,27.9506,-82.4572,413554,"Tampa,Florida,United States",America/New_York
+Newark,NJ,New Jersey,mid,40.7357,-74.1724,323808,"Newark,New Jersey,United States",America/New_York
+Reno,NV,Nevada,mid,39.5296,-119.8138,283621,"Reno,Nevada,United States",America/Los_Angeles
+Boise,ID,Idaho,mid,43.6150,-116.2023,238429,"Boise,Idaho,United States",America/Boise
+Tacoma,WA,Washington,mid,47.2529,-122.4443,229816,"Tacoma,Washington,United States",America/Los_Angeles
+Worcester,MA,Massachusetts,mid,42.2626,-71.8023,213862,"Worcester,Massachusetts,United States",America/New_York
+Knoxville,TN,Tennessee,mid,35.9606,-83.9207,202021,"Knoxville,Tennessee,United States",America/New_York
+Lakeland,FL,Florida,small,28.0395,-81.9498,125520,"Lakeland,Florida,United States",America/New_York
+Bend,OR,Oregon,small,44.0582,-121.3153,107342,"Bend,Oregon,United States",America/Los_Angeles
+Bellingham,WA,Washington,small,48.7519,-122.4787,96395,"Bellingham,Washington,United States",America/Los_Angeles
+Redding,CA,California,small,40.5865,-122.3917,94092,"Redding,California,United States",America/Los_Angeles
+Asheville,NC,North Carolina,small,35.5951,-82.5515,93523,"Asheville,North Carolina,United States",America/New_York
+Trenton,NJ,New Jersey,small,40.2206,-74.7597,91506,"Trenton,New Jersey,United States",America/New_York
+Flagstaff,AZ,Arizona,small,35.1983,-111.6513,77260,"Flagstaff,Arizona,United States",America/Phoenix
+Greenville,SC,South Carolina,small,34.8526,-82.3940,75310,"Greenville,South Carolina,United States",America/New_York

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExtractionResultV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["businesses"],
+  "properties": {
+    "businesses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "recommended", "rank_in_answer", "phone", "website", "address"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "recommended": {"type": "boolean"},
+          "rank_in_answer": {"type": ["integer", "null"], "minimum": 1},
+          "phone": {"type": ["string", "null"]},
+          "website": {"type": ["string", "null"]},
+          "address": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

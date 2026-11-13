@@ -1,0 +1,37 @@
+{
+  "_comment": "Editable domain -> category map for the Source mix metric (protocol section 5). Categories: business_site, directory, review_platform, marketplace, forum, media, government, other. Domains not listed fall back to heuristics in panel/metrics.py (gov/edu TLDs -> government; known news patterns -> media; everything else -> business_site, on the assumption that an uncategorised cited domain is the business's own site). Edit freely; the mapping is applied at metrics time, not at collection time.",
+  "review_platform": [
+    "yelp.com", "google.com", "trustpilot.com", "birdeye.com", "sitejabber.com",
+    "consumeraffairs.com", "glassdoor.com"
+  ],
+  "directory": [
+    "bbb.org", "yellowpages.com", "mapquest.com", "manta.com", "superpages.com",
+    "chamberofcommerce.com", "dexknows.com", "citysearch.com", "local.com", "foursquare.com",
+    "expertise.com", "threebestrated.com", "bark.com", "porch.com", "buildzoom.com",
+    "houzz.com", "nextdoor.com", "roofingcontractor.com", "gaf.com", "owenscorning.com",
+    "certainteed.com", "carrier.com", "trane.com", "lennox.com"
+  ],
+  "marketplace": [
+    "angi.com", "angieslist.com", "homeadvisor.com", "thumbtack.com", "networx.com",
+    "homeguide.com", "fixr.com", "modernize.com", "taskrabbit.com", "handy.com"
+  ],
+  "forum": [
+    "reddit.com", "quora.com", "city-data.com", "facebook.com", "x.com", "twitter.com",
+    "diychatroom.com", "contractortalk.com"
+  ],
+  "media": [
+    "nytimes.com", "washingtonpost.com", "forbes.com", "usnews.com", "cnn.com",
+    "houstonchronicle.com", "chron.com", "azcentral.com", "ajc.com", "seattletimes.com",
+    "denverpost.com", "chicagotribune.com", "inquirer.com", "thenewstribune.com",
+    "idahostatesman.com", "knoxnews.com", "tulsaworld.com", "desmoinesregister.com",
+    "greenvilleonline.com", "rgj.com", "bendbulletin.com", "azdailysun.com",
+    "citizen-times.com", "bozemandailychronicle.com", "newsadvance.com", "telegraphherald.com",
+    "patch.com", "wikipedia.org", "bobvila.com", "thisoldhouse.com", "familyhandyman.com"
+  ],
+  "government": [
+    "usa.gov", "ftc.gov", "energy.gov", "epa.gov"
+  ],
+  "other": [
+    "youtube.com", "linkedin.com", "instagram.com", "tiktok.com", "pinterest.com"
+  ]
+}
