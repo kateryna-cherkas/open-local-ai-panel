@@ -1,5 +1,9 @@
 # Open Local AI Panel
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24204767.svg)](https://doi.org/10.5281/zenodo.24204767)
+
+**Cite:** Cherkas, K. (2026). *Open Local AI Panel: study protocol v1.0 and data pipeline* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24204768
+
 A monthly, open, reproducible panel that measures **which independent local
 home-service businesses AI assistants recommend** for non-branded local queries
 in the United States, how stable those recommendations are, how they compare

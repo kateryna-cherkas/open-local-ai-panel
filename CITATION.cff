@@ -8,6 +8,7 @@ authors:
 version: 1.0.0
 date-released: 2026-11-13
 license: MIT
+doi: 10.5281/zenodo.24204767
 repository-code: "https://github.com/kateryna-cherkas/open-local-ai-panel"
 keywords:
   - generative AI
