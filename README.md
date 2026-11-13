@@ -5,8 +5,8 @@ home-service businesses AI assistants recommend** for non-branded local queries
 in the United States, how stable those recommendations are, how they compare
 with Google's local pack, and how accurate their facts are.
 
-The study design is fixed in [PROTOCOL.md](PROTOCOL.md) (v0.2, pre-registration
-draft). This repository is the data pipeline that implements it. Build
+The study design is fixed in [PROTOCOL.md](PROTOCOL.md) (v1.0, pre-registered before the first full wave).
+This repository is the data pipeline that implements it. Build
 decisions, API-doc verification and known gaps are in [BUILD_NOTES.md](BUILD_NOTES.md).
 
 - 4 niches (construction, appliance repair, roofing, cleaning) x 3 prompt templates = 12 prompts

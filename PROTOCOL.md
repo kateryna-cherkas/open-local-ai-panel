@@ -1,7 +1,7 @@
-# Open Local AI Panel: Study Protocol v0.2
+# Open Local AI Panel: Study Protocol v1.0
 
-**Status:** pre-registration draft · **Version date:** 2026-11-12 (v0.1: 2026-10-06) · **Author:** Kateryna Cherkas
-**Changes after this date are recorded in `CHANGELOG.md` with a reason.**
+**Status:** pre-registered, frozen before the first full wave (December 2026) · **Version date:** 2026-11-13 (drafts: v0.1 2026-10-06, v0.2 2026-11-12) · **Author:** Kateryna Cherkas
+**Any change after this date opens a new protocol version and is recorded in `CHANGELOG.md` with a reason.**
 
 ## 1. Purpose
 
@@ -48,7 +48,7 @@ Tiers are based on city (incorporated place) population from the US Census Burea
 - **Mid (8):** New-state picks: Bakersfield CA; Tampa FL; Newark NJ; Worcester MA. Kept: Reno NV; Boise ID; Tacoma WA; Knoxville TN
 - **Small (8):** New-state picks: Lakeland FL; Bellingham WA; Redding CA; Trenton NJ. Kept: Bend OR; Asheville NC; Flagstaff AZ; Greenville SC
 
-17 states. **Selection rationale (v0.2):** (a) every size tier includes a city from each of the states where the author has hands-on client work with local businesses (California, Florida, Washington) and from New Jersey and Massachusetts, so that findings can be checked against field experience; (b) the remaining cities spread the panel across US regions (South, Southwest, Mountain West, Midwest, Northeast, Pacific Northwest). The five pilot cities (Houston, Denver, Boise, Knoxville, Bend) are kept for pilot-to-wave comparison. Results are not population-weighted estimates for the US; they describe this fixed panel of cities, and comparisons are made between tiers and engines.
+17 states. **Selection rationale (v1.0):** (a) every size tier includes a city from each of the states where the author has hands-on client work with local businesses (California, Florida, Washington) and from New Jersey and Massachusetts, so that findings can be checked against field experience; (b) the remaining cities spread the panel across US regions (South, Southwest, Mountain West, Midwest, Northeast, Pacific Northwest). The five pilot cities (Houston, Denver, Boise, Knoxville, Bend) are kept for pilot-to-wave comparison. Results are not population-weighted estimates for the US; they describe this fixed panel of cities, and comparisons are made between tiers and engines.
 
 Changes from v0.1 (made before the first full wave, without looking at full-wave data): removed Tulsa OK, Des Moines IA, Dubuque IA, Bozeman MT, Lynchburg VA; added the 11 new-state picks above; Greenville SC (75,310) moved from mid to small after the Census check.
 
@@ -82,7 +82,7 @@ The model version is set in config, and the exact model string returned by each 
 1. **Raw storage.** Each AI response is saved unmodified as JSONL. Each record includes: wave id, timestamp (UTC), engine, requested model, returned model, prompt template id, city, repeat index, full response text, citations or URLs returned by the API, latency, and error if any.
 2. **Entity extraction.** Business names recommended in each response are extracted into a fixed JSON schema: name, rank in answer, phone/website/address if stated. Extraction uses an LLM, with the extractor model and its prompt versioned in `extract/`. Any business that is only mentioned, and not recommended, is flagged separately.
 3. **Extraction validation.** Each wave, 100 random responses are hand-coded by a person. Agreement with the extractor (precision and recall at the business-name level) is reported. If recall falls below 0.9, the wave is re-extracted after the extractor is fixed.
-4. **Resolution.** Each name + city is sent to Places Text Search (service-area businesses without a public address included). The first candidate is accepted only if name similarity ≥ 0.85, measured as token-set ratio after legal suffixes (LLC, Inc, etc.) are removed, or if the names are identical after spaces and punctuation are removed; and if it lies in the city's metro area: within the metro radius when Places gives coordinates, or, for service-area businesses without coordinates, with a phone area code of that metro (`panel/areacodes.py`; toll-free or missing phone → not accepted). If the first query fails, a second query is sent with the cleaned name (location suffixes removed) plus the niche keyword, under the same rules. Otherwise the business is marked `unresolved`. A sample of resolutions is hand-checked. (Rules as of protocol v0.2.)
+4. **Resolution.** Each name + city is sent to Places Text Search (service-area businesses without a public address included). The first candidate is accepted only if name similarity ≥ 0.85, measured as token-set ratio after legal suffixes (LLC, Inc, etc.) are removed, or if the names are identical after spaces and punctuation are removed; and if it lies in the city's metro area: within the metro radius when Places gives coordinates, or, for service-area businesses without coordinates, with a phone area code of that metro (`panel/areacodes.py`; toll-free or missing phone → not accepted). If the first query fails, a second query is sent with the cleaned name (location suffixes removed) plus the niche keyword, under the same rules. Otherwise the business is marked `unresolved`. A sample of resolutions is hand-checked. (Rules as of protocol v1.0.)
 5. **Classification.**
    - **Ghost:** the business is unresolved and also not found by a manual search (see 4.6).
    - **Closed:** Places returns business_status CLOSED_PERMANENTLY.

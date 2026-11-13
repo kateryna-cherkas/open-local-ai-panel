@@ -12,7 +12,7 @@ import pandas as pd
 from panel.paths import REPORTS_DIR, processed_wave_dir
 from panel.storage import read_jsonl
 from panel.paths import raw_wave_dir
-from panel.config import ENGINE_IDS
+from panel.config import ENGINE_IDS, load_panel
 
 METRIC_LABELS = [
     ("distinct_count", "Distinct resolved businesses (per cell)"),
@@ -114,7 +114,7 @@ def build(wave: str) -> str:
         "# Open Local AI Panel: wave %s" % wave,
         "",
         "> **DRAFT. Auto-generated on %s. Not reviewed. Not for citation.**" % dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-        "> Protocol v0.1 (see PROTOCOL.md). All associations are correlational. Ghost rate in the tables counts only labeled pairs; the sample-based estimate (protocol 4.6) is in ghost_estimate.csv.",
+        "> Protocol v%s (see PROTOCOL.md)." % load_panel().get("protocol_version", "?") + " All associations are correlational. Ghost rate in the tables counts only labeled pairs; the sample-based estimate (protocol 4.6) is in ghost_estimate.csv.",
         "",
         "## 1. Collection",
         "",

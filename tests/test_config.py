@@ -49,7 +49,7 @@ class ConfigTests(unittest.TestCase):
         self.assertIn("Bend", tiers["small"])
         self.assertIn("Greenville", tiers["small"])
         for c in self.cities:
-            # Tier thresholds, protocol 3.2 (v0.2): large >= 500k, mid 150k-500k, small < 150k.
+            # Tier thresholds, protocol 3.2: large >= 500k, mid 150k-500k, small < 150k.
             p = c.population
             self.assertEqual(c.tier, "large" if p >= 500000 else "mid" if p >= 150000 else "small", c.city)
         for c in self.cities:
