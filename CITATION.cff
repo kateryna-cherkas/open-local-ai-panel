@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this protocol, code or data, please cite it as below."
+title: "Open Local AI Panel: study protocol v1.0 and data pipeline"
+authors:
+  - family-names: Cherkas
+    given-names: Kateryna
+    affiliation: WebHunter Studio
+version: 1.0.0
+date-released: 2026-11-13
+license: MIT
+repository-code: "https://github.com/kateryna-cherkas/open-local-ai-panel"
+keywords:
+  - generative AI
+  - local search
+  - AI recommendations
+  - pre-registration

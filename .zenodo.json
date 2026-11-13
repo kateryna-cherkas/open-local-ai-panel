@@ -1,0 +1,13 @@
+{
+  "title": "Open Local AI Panel: study protocol v1.0 and data pipeline",
+  "upload_type": "software",
+  "description": "<p>Pre-registered protocol (v1.0, frozen 2026-11-13, before the first full wave) and open-source pipeline for a monthly, reproducible panel that measures which independent local service businesses AI assistants (ChatGPT, Gemini, Perplexity, Claude, Google AI Overview) recommend for non-branded local queries in 26 US cities across 4 niches (construction, appliance repair, roofing, cleaning); how stable those recommendations are; how they compare with Google's local pack; and how accurate the stated facts are. Data for each wave will be released as a separate dataset.</p>",
+  "creators": [
+    {"name": "Cherkas, Kateryna", "affiliation": "WebHunter Studio"}
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "version": "1.0.0",
+  "keywords": ["generative AI", "AI search", "local search", "local businesses", "LLM recommendations", "Google AI Overview", "pre-registration", "reproducibility"]
+}
